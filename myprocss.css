@@ -142,5 +142,48 @@ body {
   button:hover {
     background-color: #8d5e3c;
   }
+
+
+
+@media (max-width: 768px) {
+  /* تخطيط الأعمدة يتحول إلى صف واحد على الجوال */
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  /* تصغير حجم النصوص في الهيدر والفوتر */
+  header, footer {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* جعل مربعات الدخول والتفاصيل والفاتورة تتناسب مع شاشة الجوال */
+  .login-box,
+  .details-box,
+  #cartItems,
+  #invoiceContent {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* جعل الصور تأخذ عرض الشاشة بالكامل */
+  .product img,
+  #detailImage {
+    width: 100%;
+    height: auto;
+  }
+
+  /* تصغير الأزرار قليلاً */
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* جعل النصوص تتوسط */
+  main, aside, section, footer {
+    text-align: center;
+  }
+}
   
   
