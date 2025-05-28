@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>متجر الزبيب</title>
+  <link rel="stylesheet" href="darkmod.css">
+  <link rel="stylesheet" href="myprocss.css">
+  
+</head>
+<body>
+
+   <!-- زر الوضع اليلي -->
+    <button onclick="toggleDarkMode()">الوضع اليلي/النهاري</button>
+
+  <!-- صفحة تسجيل الدخول -->
+  <section id="loginSection">
+    <div class="login-box">
+      <h2>تسجيل الدخول</h2>
+      <input type="text" id="username" placeholder="اسم المستخدم">
+      <input type="password" id="password" placeholder="كلمة المرور">
+      <button onclick="login()">دخول</button>
+    </div>
+  </section>
+
+
+ 
+
+  <!-- الصفحة الرئيسية -->
+  <section id="mainSection" style="display: none;">
+
+    <header>متجر الزبيب</header>
+    <aside>
+      <button onclick="showCart()">سلة التسوق</button>
+    </aside>
+    <main>
+      <h1>مرحبا بك في متجر الزبيب</h1>
+      <p>اكتشف ألذ أنواع الزبيب لدينا!</p>
+      <div class="products" id="productList"></div>
+      <!-- هذا يحتوي على كل منتجات الزبيب وخليته يتنفذ بجافا اسكربت -->
+    </main>
+    <footer>
+      <p>العنوان: تعز  شارع التحرير| اسم المتجر: متجر الزبيب | 777777777</p>
+    </footer>
+  </section>
+
+  <!-- تفاصيل المنتج -->
+  <section id="detailsSection" style="display: none;">
+    <div class="details-box">
+      <!-- هذا فعلته صنو\دوق منسق لكل نوع زبيب -->
+      <h2 id="detailTitle"></h2>
+      <img id="detailImage" src="" alt="شششش" />
+      <p id="detailDescription"></p>
+      <p><strong>السعر: حسب النوع 1000 الى 10000 ريال/للكيلو</strong></p>
+      <input type="number" id="quantityInput" min="1" value="1">
+      <!-- هذا كمية الزبيب يبا اول شي من 1كيلو -->
+      <button onclick="addToCart()">أضف للسلة</button>
+      <button onclick="backToMain()">عودة</button>
+      <!-- ذا حق زر العوده -->
+    </div>
+  </section>
+
+  <!-- سلة التسوق -->
+  <section id="cartSection" style="display: none;">
+    <h2>سلة التسوق</h2>
+    <div id="cartItems"></div>
+    <!-- ذا يعرض العناصر الموجوده بالسله -->
+    <button onclick="generateInvoice()">شراء الآن</button>
+    <!-- هذا الزر يولد الفاتوره -->
+    <button onclick="backToMain()">عودة</button>
+  </section>
+
+  <!-- الفاتورة -->
+  <section id="invoiceSection" style="display: none;">
+    <h2>فاتورتك</h2>
+    <div id="invoiceContent"></div>
+    <p>شكراً لتسوقك معنا!</p>
+    <button onclick="returnToMain()">عودة للصفحة الرئيسية</button>
+  </section>
+
+  <script src="myprojav2.js"></script>
+</body>
+</html>
+
