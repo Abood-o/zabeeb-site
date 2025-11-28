@@ -148,7 +148,8 @@ body {
 @media (max-width: 768px) {
   /* تخطيط الأعمدة يتحول إلى صف واحد على الجوال */
   .products {
-    grid-template-columns: 1fr;
+    /*grid-template-columns: 1fr;*/
+      grid-template-columns: repeat(2,1fr));
   }
 
   /* تصغير حجم النصوص في الهيدر والفوتر */
@@ -187,3 +188,4 @@ body {
 }
   
   
+
